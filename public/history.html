@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking - Booking History</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Booking History</h1>
+        <nav>
+            <a href="homepage.html" class="nav-button">Home</a>
+            <a href="dashboard.html" class="nav-button">Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-group">
+        <section>
+            <div id="recentBookings">
+                <!-- Recent bookings will be dynamically inserted here -->
+            </div>
+        </div>            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gas Booking System</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            showRecentBookings();
+        });
+
+        function showRecentBookings() {
+            const bookingsKey = 'recentBookings';
+            const bookings = JSON.parse(localStorage.getItem(bookingsKey)) || [];
+            const container = document.getElementById('recentBookings');
+            container.innerHTML = '<h2>Recent Bookings</h2>';
+            if (bookings.length === 0) {
+                container.innerHTML += '<p>No recent bookings.</p>';
+                return;
+            }
+            bookings.forEach(booking => {
+                container.innerHTML += `
+                    <div class="booking-item">
+                        <p><strong>Gas Type:</strong> ${booking.gasType}</p>
+                        <p><strong>Quantity:</strong> ${booking.quantity}</p>
+                        <p><strong>Delivery Address:</strong> ${booking.deliveryAddress}</p>
+                        <p><strong>Delivery Date:</strong> ${booking.deliveryDate}</p>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url(images/Media\ \(7\).jpg);
+}
+
+.form-group label span {
+    color: red;
+    margin-left: 5px;
+}
+
+header {
+    background: navy;
+    color: #fff;
+    padding: 0.3em;
+    text-align: center;
+    position: relative;
+}
+header .logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    border: 2px solid white; /* Add a white border */
+    padding: 2px; /* Optional: add some padding to separate the image from the border */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 20px; /* Add some space below the title */
+}
+
+.nav-button {
+    display: inline-block;
+    color: white; /* Change text color to white */
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: navy;
+}
+
+main {
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    color: #fffefe;
+}
+
+h2 {
+    color: #333;
+}
+.form-group {
+    max-width: 500px; /* Set max-width for larger screens */
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 10px;
+    background-color: #fff; /* White background for form fields */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative; /* Needed for positioning inside the form */
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px; /* More space below labels */
+    color: #555; /* Slightly darker gray for labels */
+    font-weight: bold; /* Make labels bold for better readability */
+
+}
+
+input, select, textarea {
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 10px; /* Increased padding for better user interaction */
+    border: 0.6px solid #ddd; /* Light border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 8px; /* Space between form elements */
+    font-size: 16px; /* Larger text for better readability */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+button {
+    background-color: navy; /* Consistent button color */
+    color: white; /* White text on buttons */
+    border: none; /* Remove default border */
+    padding: 12px 25px; /* Larger padding for better interaction */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Consistent font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    margin-top: 20px; /* Space above the button */
+}
+
+button:hover {
+    background-color: #258ae3; /* Lighter blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+button:disabled {
+    background-color: #ccc; /* Gray background for disabled state */
+    cursor: not-allowed; /* Not-allowed cursor for disabled state */
+}
+
+#message, #loginMessage, #bookingMessage, #paymentMessage, #contactMessageResult {
+    margin-top: 20px; /* More space above messages */
+    text-align: center; /* Center-align text */
+    color: rgb(25, 150, 56); /* Green color for success messages */
+    font-size: 18px; /* Larger font size for better visibility */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
